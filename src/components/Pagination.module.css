@@ -1,0 +1,104 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.info {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.info strong { color: var(--text-secondary); font-weight: 500; }
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pageSizeWrap {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.select {
+  padding: 5px 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 12px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  outline: none;
+}
+.select option { background: var(--surface-2); }
+
+.pageButtons {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.navBtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.navBtn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.navBtn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.pageBtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.pageBtn:hover { border-color: var(--accent); color: var(--accent); }
+
+.pageBtn.activePage {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.ellipsis {
+  width: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+@media (max-width: 540px) {
+  .pagination { flex-direction: column; align-items: flex-start; }
+  .ellipsis { display: none; }
+}
